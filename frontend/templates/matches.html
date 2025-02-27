@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Cricket Match</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white flex flex-col items-center justify-center min-h-screen">
+
+    <div class="w-full max-w-4xl p-6 bg-gray-800 rounded-lg shadow-lg">
+        <h1 class="text-2xl font-bold text-center mb-4">Live Cricket Match</h1>
+
+        <div class="flex justify-center space-x-4">
+            <button class="tab-btn px-4 py-2 bg-gray-700 rounded-lg" data-tab="live">Live Updates</button>
+            <button class="tab-btn px-4 py-2 bg-gray-700 rounded-lg" data-tab="scorecard">Scorecard</button>
+        </div>
+
+        <div id="live-tab" class="tab-content mt-6">
+            <h2 class="text-xl font-semibold mb-2" id="matchTitle"></h2>
+            <p><strong>Current Playing:</strong> <span id="playing"></span></p>
+            <p><strong>Current Score:</strong> <span id="score"></span></p>
+            <p><strong>Current Over:</strong> <span id="currentOver"></span></p>
+            <p><strong>Last Over:</strong> <span id="lastOver"></span></p>
+            <p><strong>Match Status:</strong> <span id="status"></span></p>
+        </div>
+
+        <div id="scorecard-tab" class="tab-content mt-6 hidden">
+            <h2 class="text-xl font-semibold mb-4">Scorecard</h2>
+            
+            <div class="space-y-6">
+                <div id="team1-batting" class="bg-gray-700 p-5 rounded-lg"></div>
+                <div id="team1-bowling" class="bg-gray-700 p-5 rounded-lg"></div>
+                <div id="team2-batting" class="bg-gray-700 p-5 rounded-lg"></div>
+                <div id="team2-bowling" class="bg-gray-700 p-5 rounded-lg"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="static/match_script.js">
+        
+    </script>
+</body>
+</html>
